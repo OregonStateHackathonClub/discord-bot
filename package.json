@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  },
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "hackathon club @ osu discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OregonStateHackathonClub/discord-bot.git"
+  },
+  "author": "hackathon club officers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OregonStateHackathonClub/discord-bot/issues"
+  },
+  "homepage": "https://github.com/OregonStateHackathonClub/discord-bot#readme"
+}
