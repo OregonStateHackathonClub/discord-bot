@@ -1,11 +1,13 @@
 {
-  "name": "discord-applications",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "discord.js": "^14.16.3"
+  },
+  "name": "monitor",
   "version": "1.0.0",
-  "description": "discord applications for the hackathon club @ osu",
+  "description": "web scrapers for hackathon club",
   "scripts": {
-    "bot": "cd packages/bot && npm run start",
-    "monitor": "cd packages/monitor && npm run start",
-    "deploy-commands": "cd packages/bot && npm run deploy"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
