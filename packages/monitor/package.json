@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^1.7.7",
+    "discord.js": "^14.16.3"
+  },
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "web scrapers for hackathon club",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OregonStateHackathonClub/discord-bot.git"
+  },
+  "author": "officers @ hackathon club",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OregonStateHackathonClub/discord-bot/issues"
+  },
+  "homepage": "https://github.com/OregonStateHackathonClub/discord-bot#readme"
+}
