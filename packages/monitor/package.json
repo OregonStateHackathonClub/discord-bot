@@ -3,6 +3,7 @@
     "axios": "^1.7.7",
     "discord.js": "^14.16.3"
   },
+  "type": "module",
   "name": "monitor",
   "version": "1.0.0",
   "description": "web scrapers for hackathon club",

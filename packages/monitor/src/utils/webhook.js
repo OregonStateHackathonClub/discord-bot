@@ -1,25 +1,21 @@
 import { WebhookClient, EmbedBuilder } from 'discord.js'
 
-export default product => {
-    let first = ''; let second = ''
-    if( product.sizes.length > 8 ) { 
-        first = product.sizes.slice(0, Math.round(product.sizes.length / 2)).join('')
-        second = product.sizes.slice(Math.round(product.sizes.length / 2)).join('')
-    } else {
-        first = product.sizes.join('')
-        second = '\u200b'
-    }
-    const webhooks = [ process.env.brickBot ]
+export default hackathon => {
+
+    const themes = []
+    for (const theme in hackathon.themes) themes.push(theme.name)
+
+    const webhook = process.env.WEBHOOK_URL
     const embed = new EmbedBuilder()
-        .setColor('#FFFFFF')
-        .setAuthor({ name: 'https://www.asos.com/us', url: 'https://www.asos.com/us' })
-        .setTitle(`${product.title} - ${product.price}`)
-        .setURL(`https://www.asos.com/us/~/~/prd/${product.pid}`)
+        .setTitle(hackathon.title)
+        .setURL(hackathon.url)
         .addFields(
-            { name: 'Sizes Instock', value: first, inline: true },
-            { name: '\u200b', value: second, inline: true }
+            { name: 'Hacking period', value: hackathon.submission_period_dates, inline: true },
+            { name: 'Time left to submit', value: hackathon.time_left_to_submission, inline: true },
+            { name: 'Host', value: hackathon.organization_name, inline: false },
+            { name: 'Theme', value: themes.join(", "), inline: true },
+            { name: 'Prize', value: `$${hackathon.prize_amount.replace(/[^\d,]/g, '')}`, inline: true },
         )
-    webhooks.forEach( webhook => {
-        (new WebhookClient({ url: webhook })).send({ embeds: [embed] })
-    })
+    
+    (new WebhookClient({ url: webhook })).send({ embeds: [embed] })
   }
