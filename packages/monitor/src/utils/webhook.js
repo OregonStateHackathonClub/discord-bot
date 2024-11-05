@@ -1,4 +1,7 @@
+import dotenv from 'dotenv'
 import { WebhookClient, EmbedBuilder } from 'discord.js'
+
+dotenv.config()
 
 export default hackathon => {
 
