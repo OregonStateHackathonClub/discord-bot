@@ -6,7 +6,7 @@ dotenv.config()
 export default hackathon => {
 
     const themes = []
-    for (const theme in hackathon.themes) themes.push(theme.name)
+    for (const theme of hackathon.themes) themes.push(theme.name)
 
     const webhook = process.env.WEBHOOK_URL
     const embed = new EmbedBuilder()
